@@ -124,3 +124,31 @@ button:focus {
 form {
     margin-top: 20px;
 }
+
+#sleighContainer {
+    position: fixed;
+    top: 10%;
+    left: -100%;
+    width: 100%;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+#sleigh {
+    width: 200px; 
+    height: auto;
+    position: relative;
+    animation: none; 
+}
+
+@keyframes flyAcross {
+    0% {
+        left: -20%; 
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        left: 150%;
+    }
+}

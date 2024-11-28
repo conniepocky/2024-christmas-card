@@ -3,6 +3,10 @@ const content = document.getElementById('firstBg');
 const globeContainer = document.getElementById('globeContainer');
 const button = document.getElementById('submitButton');
 const title = document.getElementById("message");
+const sleigh = document.getElementById('sleigh');
+const jingleBells = document.getElementById('jingleBells');
+
+var santaInFlight = false;
 
 button.addEventListener('click', (event) => {
 
@@ -35,7 +39,7 @@ tsParticles.loadJSON('particles', 'particles.json')
         const acceleration = calculateAcceleration(event);
 
         if (acceleration > 23) {
-        shakeItUp()
+            shakeItUp()
         }
     });
 });
@@ -46,7 +50,26 @@ function calculateAcceleration(event) {
     return accelerationMagnitude;
 }
 
+function santaFly() {
+
+    jingleBells.currentTime = 0;
+    jingleBells.play();
+
+    santaInFlight = true;
+    sleigh.style.animation = 'flyAcross 9s linear';
+
+    setTimeout(() => {
+        sleigh.style.animation = 'none';
+        santaInFlight = false;
+    }, 9000);
+}
+
 function shakeItUp() {
+
+    if (!santaInFlight) {
+        santaFly();
+    }
+
     particles.play();
     
     globe.classList.add("shake")

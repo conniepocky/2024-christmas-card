@@ -9,10 +9,17 @@
 </head>
 
 <body>
+
+    <div id="sleighContainer">
+        <img src="santa.png" id="sleigh" alt="Santa's Sleigh">
+    </div>
+
+    <audio id="jingleBells" src="sleigh.wav" preload="auto"></audio>
+
     <div class="background" id="firstBg">
         <h1>What is your name?</h1> 
 
-        <form id="name-form">
+        <form autocomplete="off" id="name-form">
             <input type="text" id="name-input" placeholder="Enter your name">
             <button type="submit" id="submitButton">Submit</button>
         </form>
