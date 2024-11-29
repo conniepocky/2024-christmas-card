@@ -67,7 +67,7 @@ button:focus {
 	height: 75vmin;
 	
 	background: url('sky.jpg') center/cover;
-    backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
 	
 	border-radius: 100%;
 	overflow: hidden;
@@ -91,19 +91,19 @@ button:focus {
 @keyframes shake {
 	0%,
 	100% {
-    transform: rotate(0deg);
+    		transform: rotate(0deg);
 	}
 	
 	25% {
-    transform: rotate(15deg);
+    		transform: rotate(15deg);
 	}
 	
 	50% {
-    transform: rotate(-15deg);
+    		transform: rotate(-15deg);
 	}
 	
 	75% {
-    transform: rotate(10deg);
+    		transform: rotate(10deg);
 	}
 }
 
